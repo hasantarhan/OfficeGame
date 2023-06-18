@@ -1,5 +1,4 @@
 ﻿using System;
-using _Game.Scripts.CameraSystem;
 using DG.Tweening;
 using Lean.Touch;
 using UnityEngine;

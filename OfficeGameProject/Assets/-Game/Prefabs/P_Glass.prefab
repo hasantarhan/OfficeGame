@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c081b2292c433e9234c2afd2591ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.25
+  moveSpeed: 0.3
   pourWaterParticle: {fileID: 1609847379320687098}
   isDragging: 0
 --- !u!65 &1483759770358635636

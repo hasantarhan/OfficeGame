@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb733d8cf8e4291b84872378205c7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineRenderer: {fileID: 512067794}
   penPoint: {fileID: 512067792}
 --- !u!1 &3285052602464766924
 GameObject:
@@ -202,8 +201,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   penDrawer: {fileID: 512067793}
-  inventoryPoint: {fileID: 0}
-  drawSpeed: 0.1
   boundaries:
     xmin: 0.55
     xmax: 0.55
@@ -211,6 +208,7 @@ MonoBehaviour:
     ymax: 1.05
     zmin: 1.8
     zmax: 2.5
+  drawSpeed: 0.15
 --- !u!1 &7266524963667747749
 GameObject:
   m_ObjectHideFlags: 0

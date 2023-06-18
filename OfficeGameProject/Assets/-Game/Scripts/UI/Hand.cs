@@ -11,7 +11,13 @@ public class Hand : MonoBehaviour
     public StateExitEvent stateExitEvent;
     public Transform realWorldObject;
     private RectTransform rectTransform;
- 
+    private Image hand;
+
+    private void Awake()
+    {
+        hand = GetComponentInChildren<Image>();
+    }
+
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -32,7 +38,7 @@ public class Hand : MonoBehaviour
 
     private void HideHandle(State obj)
     {
-        GetComponentInChildren<Image>().enabled = false;
+        hand.enabled = false;
     }
 
     private void DrawHandle(State obj)
@@ -47,16 +53,14 @@ public class Hand : MonoBehaviour
                     var screenPos = Camera.main.WorldToScreenPoint(realWorldObject.position);
                     var uiPos = new Vector3(screenPos.x, screenPos.y, screenPos.z);
                     rectTransform.position = uiPos;
-                    GetComponentInChildren<Image>().enabled = true;
+                    hand.enabled = true;
                 });
-              
-
             }
         }
         else
         {
             realWorldObject = null;
-            GetComponentInChildren<Image>().enabled = false;
+            hand.enabled = false;
 
         }
     }

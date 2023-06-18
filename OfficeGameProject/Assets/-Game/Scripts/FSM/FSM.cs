@@ -16,11 +16,6 @@ namespace _Game.Scripts
             ChangeState(states[0]);
 
         }
-
-        private void Start()
-        {
-        }
-
         public void Initialize()
         {
             foreach (var state in states)
@@ -50,9 +45,15 @@ namespace _Game.Scripts
 
         public void ChangeState(State state)
         {
-            currentState?.Exit();
+            if (currentState != null)
+            {
+                currentState?.Exit();
+            }
             currentState = state;
-            currentState?.Enter();
+            if (currentState != null)
+            {
+                currentState?.Enter();
+            }
         }
     }
 }

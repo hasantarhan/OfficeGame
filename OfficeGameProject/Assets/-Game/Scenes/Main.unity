@@ -6228,10 +6228,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1483759770358635626, guid: 3bdd354947cb1ba499898fd91c8e8d79, type: 3}
-      propertyPath: moveSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1483759770358635627, guid: 3bdd354947cb1ba499898fd91c8e8d79, type: 3}
       propertyPath: m_Name
       value: P_Glass
@@ -6289,14 +6285,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 723783315, guid: 80e98e75d1b59a74dba04d30222fd2e6, type: 3}
-      propertyPath: drawSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 723783315, guid: 80e98e75d1b59a74dba04d30222fd2e6, type: 3}
-      propertyPath: inventoryPoint
-      value: 
-      objectReference: {fileID: 207199105}
     - target: {fileID: 360702102000799254, guid: 80e98e75d1b59a74dba04d30222fd2e6, type: 3}
       propertyPath: m_RootOrder
       value: 6

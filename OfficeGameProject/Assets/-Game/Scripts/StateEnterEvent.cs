@@ -8,7 +8,7 @@ namespace _Game.Scripts
     public class StateEnterEvent : ScriptableObject
     {
         public Action<State> onStateEnter;
-        [FormerlySerializedAs("stateGameObject")] public GameObject stateMainObject;
+        public GameObject stateMainObject;
 
         public void Raise(State state)
         {
