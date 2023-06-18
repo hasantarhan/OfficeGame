@@ -9,12 +9,14 @@ namespace _Game.Scripts
         [SerializeField] private Transform penInventoryPoint;
         public override void Enter()
         {
-            base.Enter();
+            stateEnterEvent.stateMainObject = pen.gameObject;
             pen.onClick += ShakeDisable;
             pen.onClick += PenGoToInventory;
             pen.onPenInInventory += NextState;
             pen.ColliderEnabled(true);
             pen.CanClick = true;
+            base.Enter();
+
         }
 
         private void PenGoToInventory()

@@ -299,8 +299,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a74c054c2941c7ba6ac557fa0f6c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateEnterEvent: {fileID: 11400000, guid: 4a5eafcbe7c7a16468ce315e40a1d146, type: 2}
+  stateExitEvent: {fileID: 11400000, guid: 5cf14088f1e1e0341b5cfd935f156507, type: 2}
+  "\u0131nfoEvent": {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   info: Click to water bottle
-  infoData: {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   waterBottle: {fileID: 4237469397739244853}
 --- !u!114 &157208211
 MonoBehaviour:
@@ -348,8 +350,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0556f297d92f4a2396fce207e3a0cef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateEnterEvent: {fileID: 11400000, guid: 4a5eafcbe7c7a16468ce315e40a1d146, type: 2}
+  stateExitEvent: {fileID: 11400000, guid: 5cf14088f1e1e0341b5cfd935f156507, type: 2}
+  "\u0131nfoEvent": {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   info: Water to plant
-  infoData: {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   glass: {fileID: 853968623}
   waterPoint: {fileID: 1456829263}
   waterParticle: {fileID: 529192527}
@@ -442,14 +446,13 @@ GameObject:
   - component: {fileID: 170250496}
   - component: {fileID: 170250499}
   - component: {fileID: 170250498}
-  - component: {fileID: 170250497}
   m_Layer: 0
-  m_Name: doorbutton
+  m_Name: hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &170250496
 RectTransform:
   m_ObjectHideFlags: 0
@@ -457,32 +460,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170250495}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 629755866}
-  m_RootOrder: 1
+  m_Father: {fileID: 2034599185}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.5, y: 19.5}
+  m_AnchoredPosition: {x: 15.5, y: -14.744}
   m_SizeDelta: {x: 29.4882, y: 29.4882}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &170250497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170250495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82580f0c38854601ad94df6ef62d70f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RealWorldObject: {fileID: 664723325}
-  canvasScaler: {fileID: 629755864}
 --- !u!114 &170250498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,14 +485,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.36078432}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3a74f678ee8f3bd49aacf3de1ae4bcaa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8a67fac340759c4dbe7b49674a8ca12, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -931,7 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3ee07f650b44e38b62a0add9691750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoData: {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
+  "\u0131nfoEvent": {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
 --- !u!114 &318579539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1409,8 +1398,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7d081068124045a09776a43427f3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateEnterEvent: {fileID: 11400000, guid: 4a5eafcbe7c7a16468ce315e40a1d146, type: 2}
+  stateExitEvent: {fileID: 11400000, guid: 5cf14088f1e1e0341b5cfd935f156507, type: 2}
+  "\u0131nfoEvent": {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   info: Click to pen
-  infoData: {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   pen: {fileID: 723783315}
   penInventoryPoint: {fileID: 207199105}
 --- !u!114 &413255280
@@ -1475,8 +1466,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921124ab8bf64b439e81d034d3feff3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateEnterEvent: {fileID: 11400000, guid: 4a5eafcbe7c7a16468ce315e40a1d146, type: 2}
+  stateExitEvent: {fileID: 11400000, guid: 5cf14088f1e1e0341b5cfd935f156507, type: 2}
+  "\u0131nfoEvent": {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   info: Click to glass
-  infoData: {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   glass: {fileID: 853968623}
   glassInventoryPoint: {fileID: 763539625}
 --- !u!114 &419125714
@@ -2028,7 +2021,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 318579537}
-  - {fileID: 170250496}
+  - {fileID: 2034599185}
   m_Father: {fileID: 1718361471}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2037,11 +2030,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!4 &664723325 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 664723325, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
-  m_PrefabInstance: {fileID: 5261942787558942816}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &688759021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2134,13 +2122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   penPoint: {fileID: 759327059}
-  objectPrefab: {fileID: 0}
   yStart: 0.6
   yEnd: 1
   zStart: 1.8
   zEnd: 2.5
   numObjects: 60
-  points: []
 --- !u!4 &690136095
 Transform:
   m_ObjectHideFlags: 0
@@ -2304,8 +2290,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f680eb886f49f6ab2efba807346baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateEnterEvent: {fileID: 11400000, guid: 4a5eafcbe7c7a16468ce315e40a1d146, type: 2}
+  stateExitEvent: {fileID: 11400000, guid: 5cf14088f1e1e0341b5cfd935f156507, type: 2}
+  "\u0131nfoEvent": {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   info: Click to whiteboard
-  infoData: {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   penStartPosition: {fileID: 1296075281}
   pen: {fileID: 723783315}
   whiteBoard: {fileID: 1028717455897757630}
@@ -2406,8 +2394,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5fc8cbf0a1e4f7b973e711fc126854d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateEnterEvent: {fileID: 11400000, guid: 4a5eafcbe7c7a16468ce315e40a1d146, type: 2}
+  stateExitEvent: {fileID: 11400000, guid: 5cf14088f1e1e0341b5cfd935f156507, type: 2}
+  "\u0131nfoEvent": {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   info: Paint all over
-  infoData: {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   whiteBoard: {fileID: 1028717455897757630}
   pen: {fileID: 723783315}
   penStartPosition: {fileID: 1296075281}
@@ -3173,8 +3163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73a1d5e73da43c9bd62b5e0ad7db1ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateEnterEvent: {fileID: 11400000, guid: 4a5eafcbe7c7a16468ce315e40a1d146, type: 2}
+  stateExitEvent: {fileID: 11400000, guid: 5cf14088f1e1e0341b5cfd935f156507, type: 2}
+  "\u0131nfoEvent": {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   info: Throw to glass in the trash
-  infoData: {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   trash: {fileID: 398518751}
   glass: {fileID: 853968623}
 --- !u!4 &953702672
@@ -3321,8 +3313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e6c7f48bf5d44ed83ce7dd5aa05097a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentClickable: {fileID: 0}
-  inventoryPoint: {fileID: 0}
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4258,8 +4248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ea2640e7144dc08ca70fc37553774f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateEnterEvent: {fileID: 11400000, guid: 4a5eafcbe7c7a16468ce315e40a1d146, type: 2}
+  stateExitEvent: {fileID: 11400000, guid: 5cf14088f1e1e0341b5cfd935f156507, type: 2}
+  "\u0131nfoEvent": {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   info: Click to door
-  infoData: {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   door: {fileID: 116671308}
   doorButton: {fileID: 170250495}
 --- !u!1 &1247108263
@@ -5339,7 +5331,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718361470}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1653f3a272d432ea121bc1a5587c67a, type: 3}
   m_Name: 
@@ -5772,6 +5764,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2034599184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2034599185}
+  - component: {fileID: 2034599186}
+  m_Layer: 0
+  m_Name: Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2034599185
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034599184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 170250496}
+  m_Father: {fileID: 629755866}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 349.6, y: -119.8}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2034599186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034599184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82580f0c38854601ad94df6ef62d70f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateEnterEvent: {fileID: 11400000, guid: 4a5eafcbe7c7a16468ce315e40a1d146, type: 2}
+  stateExitEvent: {fileID: 11400000, guid: 5cf14088f1e1e0341b5cfd935f156507, type: 2}
+  realWorldObject: {fileID: 0}
 --- !u!1001 &2078242098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6184,10 +6228,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1483759770358635626, guid: 3bdd354947cb1ba499898fd91c8e8d79, type: 3}
-      propertyPath: inventoryPoint
-      value: 
-      objectReference: {fileID: 763539625}
     - target: {fileID: 1483759770358635627, guid: 3bdd354947cb1ba499898fd91c8e8d79, type: 3}
       propertyPath: m_Name
       value: P_Glass
@@ -6383,21 +6423,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 116671306, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
+      propertyPath: m_Size.y
+      value: 1.441592
+      objectReference: {fileID: 0}
+    - target: {fileID: 116671306, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
+      propertyPath: m_Size.z
+      value: 0.9640487
+      objectReference: {fileID: 0}
+    - target: {fileID: 116671306, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0000002384186
+      objectReference: {fileID: 0}
+    - target: {fileID: 116671306, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
+      propertyPath: m_Center.y
+      value: 0.004570842
+      objectReference: {fileID: 0}
+    - target: {fileID: 116671306, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
+      propertyPath: m_Center.z
+      value: 0.022581428
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660062019695278727, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00000005960419
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660062019695278727, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660062019695278727, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.0000001
+      objectReference: {fileID: 0}
     - target: {fileID: 7628203463173282658, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7628203463173282658, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.831061
+      value: 2.8810596
       objectReference: {fileID: 0}
     - target: {fileID: 7628203463173282658, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7628203463173282658, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.8773255
+      value: 3.877323
       objectReference: {fileID: 0}
     - target: {fileID: 7628203463173282658, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6427,6 +6499,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8840526156994438921, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 8840526156994438921, guid: dc8bbe5d68be96f4f9fffe2e2d3218a6, type: 3}
       propertyPath: m_Name
       value: P_Door

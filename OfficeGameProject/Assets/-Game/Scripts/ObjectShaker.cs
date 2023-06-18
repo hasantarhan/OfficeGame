@@ -40,7 +40,7 @@ public class ObjectShaker : MonoBehaviour
 
     public void StopShake()
     {
-        if (isShaking)
+        if (isShaking && Application.isPlaying)
         {
             StopCoroutine(shakeCoroutine);
             objectToShake.rotation = initialRotation;

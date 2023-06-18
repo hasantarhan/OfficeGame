@@ -9,6 +9,7 @@ namespace _Game.Scripts
         [SerializeField] private Glass glass;
         public override void Enter()
         {
+            stateEnterEvent.stateMainObject = null;
             trash.ColliderEnabled(true);
             trash.onClicked += GlassThrow;
             base.Enter();

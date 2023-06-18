@@ -1,14 +1,15 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Game.Scripts
 {
     public abstract class State : MonoBehaviour
     {
-        public event Action onStateEnter;
-        public event Action onStateExit;
-        public string info;
-        public InfoData infoData;
+        public StateEnterEvent stateEnterEvent;
+        public StateExitEvent stateExitEvent;
+        public InfoEvent ınfoEvent;
+        public string info; 
         protected FSM fsm;
 
         public void Initialize(FSM fsm)
@@ -20,14 +21,16 @@ namespace _Game.Scripts
         public virtual void Enter()
         {
             gameObject.SetActive(true);
-            infoData.Raise(info);            
-            onStateEnter?.Invoke();
+            stateEnterEvent.Raise(this);
+            ınfoEvent.Raise(info);            
+         
         }
 
         public virtual void Exit()
         {
             gameObject.SetActive(false);
-            onStateExit?.Invoke();
+            stateExitEvent.Raise(this);
+        
         }
     }
 }

@@ -11,10 +11,12 @@ namespace _Game.Scripts
         [SerializeField] private WhiteBoard whiteBoard;
         public override void Enter()
         {
-            base.Enter();
             whiteBoard.ColliderEnabled(true);
             whiteBoard.onClicked += NextState;
             whiteBoard.CanClick = true;
+            stateEnterEvent.stateMainObject = whiteBoard.gameObject;
+            base.Enter();
+
         }
 
         public override void Exit()

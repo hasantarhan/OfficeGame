@@ -13,7 +13,7 @@ namespace _Game.Scripts
         [SerializeField] private Plant plant;
         public override void Enter()
         {
-            base.Enter();
+            stateEnterEvent.stateMainObject = null;
             plant.onGrowed += NextState;
             DOTween.Sequence().AppendInterval(0.5f).AppendCallback(delegate
             {
@@ -36,6 +36,8 @@ namespace _Game.Scripts
                 waterParticle.Stop();
                 glass.transform.DOMoveX(glass.transform.position.x + 0.5f, 0.25f);
             });
+            base.Enter();
+
         }
 
         public override void Exit()

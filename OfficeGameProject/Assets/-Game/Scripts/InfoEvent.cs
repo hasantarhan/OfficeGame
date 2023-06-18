@@ -4,7 +4,7 @@ using UnityEngine;
 namespace _Game.Scripts
 {
     [CreateAssetMenu(fileName = "InfoData", menuName = "Katana/Info Data", order = 0)]
-    public class InfoData : ScriptableObject
+    public class InfoEvent : ScriptableObject
     {
         public Action<string> onInfoUpdated;
         private string info;

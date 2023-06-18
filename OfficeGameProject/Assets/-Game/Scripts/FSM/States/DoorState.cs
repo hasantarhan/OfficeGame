@@ -8,10 +8,11 @@ namespace _Game.Scripts
         [SerializeField] private GameObject doorButton;
         public override void Enter()
         {
-            base.Enter();
+            stateEnterEvent.stateMainObject = door.gameObject;
             door.CanClick = true;
             doorButton.SetActive(true);
             door.onClick += OnDoorClicked;
+            base.Enter();
         }
 
         public override void Exit()

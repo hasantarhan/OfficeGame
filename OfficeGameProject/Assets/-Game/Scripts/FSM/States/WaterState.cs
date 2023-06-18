@@ -8,9 +8,11 @@ namespace _Game.Scripts
         [SerializeField] private WaterBottle waterBottle;
         public override void Enter()
         {
-            base.Enter();
+            stateEnterEvent.stateMainObject = waterBottle.gameObject;
             waterBottle.onClicked += NextState;
             waterBottle.ColliderEnabled(true);
+            base.Enter();
+           
         }
 
         public override void Exit()

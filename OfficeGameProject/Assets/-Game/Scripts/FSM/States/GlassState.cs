@@ -8,12 +8,13 @@ namespace _Game.Scripts
         [SerializeField] private Transform glassInventoryPoint;
         public override void Enter()
         {
-            base.Enter();
             glass.ColliderEnabled(true);
             glass.onClick += ShakeDisable;
             glass.onClick += GlassGoToInventory;
             glass.onGlassInInventory += NextState;
             glass.CanClick = true;
+            stateEnterEvent.stateMainObject = glass.gameObject;
+            base.Enter();
         }
 
         public override void Exit()

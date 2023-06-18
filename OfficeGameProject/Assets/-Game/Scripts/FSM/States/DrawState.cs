@@ -11,7 +11,7 @@ namespace _Game.Scripts
         [SerializeField] private PaintCheck paintCheck;
         public override void Enter()
         {
-            base.Enter();
+            stateEnterEvent.stateMainObject = null;
             paintCheck.onPaintComplete += NextState;
             DOTween.Sequence().AppendInterval(0.5f).AppendCallback(delegate
             {
@@ -22,6 +22,8 @@ namespace _Game.Scripts
                     pen.DrawMode(true);
                 };
             });
+            base.Enter();
+    
         }
 
         private void NextState()

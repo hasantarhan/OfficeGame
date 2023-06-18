@@ -2,29 +2,30 @@
 using _Game.Scripts;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Game.Code.UI
 {
     [RequireComponent(typeof(TMP_Text))]
     public class InfoText : MonoBehaviour
     {
-        public InfoData infoData;
+        [FormerlySerializedAs("infoData")] public InfoEvent ınfoEvent;
         private TMP_Text text;
 
         private void Awake()
         {
             text = GetComponent<TMP_Text>();
-UpdateText(infoData.Info);
+UpdateText(ınfoEvent.Info);
         }
 
         private void OnEnable()
         {
-            infoData.onInfoUpdated += UpdateText;
+            ınfoEvent.onInfoUpdated += UpdateText;
         }
 
         private void OnDisable()
         {
-            infoData.onInfoUpdated -= UpdateText;
+            ınfoEvent.onInfoUpdated -= UpdateText;
         }
 
         private void UpdateText(string obj)
