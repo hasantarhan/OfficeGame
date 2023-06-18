@@ -13,11 +13,12 @@ namespace _Game.Scripts
         private void Awake()
         {
             Initialize();
+            ChangeState(states[0]);
+
         }
 
         private void Start()
         {
-            ChangeState(states[0]);
         }
 
         public void Initialize()

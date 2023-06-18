@@ -15,7 +15,7 @@ namespace _Game.Code.UI
         private void Awake()
         {
             text = GetComponent<TMP_Text>();
-UpdateText(ınfoEvent.Info);
+            UpdateText(ınfoEvent.Info);
         }
 
         private void OnEnable()

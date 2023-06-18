@@ -42,7 +42,7 @@ public class Hand : MonoBehaviour
             realWorldObject = stateEnterEvent.stateMainObject.transform;
             if (realWorldObject)
             {
-                DOTween.Sequence().AppendInterval(1).AppendCallback(delegate
+                DOTween.Sequence().AppendInterval(1f).AppendCallback(delegate
                 {
                     var screenPos = Camera.main.WorldToScreenPoint(realWorldObject.position);
                     var uiPos = new Vector3(screenPos.x, screenPos.y, screenPos.z);
