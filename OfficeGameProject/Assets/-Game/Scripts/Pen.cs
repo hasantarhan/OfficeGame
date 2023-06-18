@@ -8,12 +8,11 @@ namespace _Game.Scripts
 {
     public class Pen : MonoBehaviour, IClickable
     {
-        public PenDrawer penDrawer;
-        public Transform inventoryPoint;
+        [SerializeField] private PenDrawer penDrawer;
+        [SerializeField] private Boundaries boundaries;
+        public float drawSpeed = 1;
         public Action onPenInInventory;
         public Action onClick;
-        public float drawSpeed = 1;
-        public Boundaries boundaries;
         private Collider collider;
         private bool drawMode;
 
@@ -23,7 +22,6 @@ namespace _Game.Scripts
         {
             collider = GetComponent<Collider>();
             penDrawer.gameObject.SetActive(false);
-            CanClick = true;
         }
 
         private void OnEnable()
@@ -51,15 +49,7 @@ namespace _Game.Scripts
         public void OnClick()
         {
             onClick?.Invoke();
-            transform.SetParent(inventoryPoint);
             ColliderEnabled(false);
-            var sequence = DOTween.Sequence();
-            sequence.Append(transform.DOMoveY(transform.position.y + 15, 0.5f))
-                .Join(transform.DORotate(new Vector3(0, 0, 720), 0.5f, RotateMode.LocalAxisAdd))
-                .Join(transform.DOLocalRotate(Vector3.zero, 0.5f))
-                .Append(transform.DOMove(inventoryPoint.position, 0.5f))
-                .OnComplete(() => { onPenInInventory?.Invoke(); });
-            sequence.Play();
         }
         public void DrawMode(bool enabled)
         {
@@ -73,7 +63,17 @@ namespace _Game.Scripts
                 penDrawer.transform.SetParent(null);
             }
         }
-
+        public void GoToInventoryPoint(Transform inventoryPoint)
+        {
+            transform.SetParent(inventoryPoint);
+            var sequence = DOTween.Sequence();
+            sequence.Append(transform.DOMoveY(transform.position.y + 15, 0.5f))
+                .Join(transform.DORotate(new Vector3(0, 0, 720), 0.5f, RotateMode.LocalAxisAdd))
+                .Join(transform.DOLocalRotate(Vector3.zero, 0.5f))
+                .Append(transform.DOMove(inventoryPoint.position, 0.5f))
+                .OnComplete(() => { onPenInInventory?.Invoke(); });
+            sequence.Play();
+        }
         public void ColliderEnabled(bool enabled)
         {
             collider.enabled = enabled;

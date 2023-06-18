@@ -5,10 +5,10 @@ namespace _Game.Scripts
 {
     public class DrawState : State
     {
-        public WhiteBoard whiteBoard;
-        public Pen pen;
-        public Transform penStartPosition;
-        public PaintCheck paintCheck;
+        [SerializeField] private WhiteBoard whiteBoard;
+        [SerializeField] private Pen pen;
+        [SerializeField] private Transform penStartPosition;
+        [SerializeField] private PaintCheck paintCheck;
         public override void Enter()
         {
             base.Enter();

@@ -4,14 +4,16 @@ namespace _Game.Scripts
 {
     public class GlassState : State
     {
-        public Glass glass;
-
+        [SerializeField] private Glass glass;
+        [SerializeField] private Transform glassInventoryPoint;
         public override void Enter()
         {
             base.Enter();
             glass.ColliderEnabled(true);
-            glass.onGlassInInventory += NextState;
             glass.onClick += ShakeDisable;
+            glass.onClick += GlassGoToInventory;
+            glass.onGlassInInventory += NextState;
+            glass.CanClick = true;
         }
 
         public override void Exit()
@@ -19,6 +21,13 @@ namespace _Game.Scripts
             base.Exit();
             glass.onGlassInInventory -= NextState;
             glass.onClick -= ShakeDisable;
+            glass.onClick -= GlassGoToInventory;
+            glass.CanClick = false;
+        }
+
+        private void GlassGoToInventory()
+        {
+            glass.GoToInventoryPoint(glassInventoryPoint);
         }
 
         private void ShakeDisable()

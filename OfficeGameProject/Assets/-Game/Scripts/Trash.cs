@@ -9,7 +9,7 @@ namespace _Game.Scripts
         public bool CanClick { get; set; }
         public Action onClicked;
         public Transform glassThrowPoint;
-        public Collider collider;
+        [SerializeField] private Collider collider;
 
         private void Awake()
         {

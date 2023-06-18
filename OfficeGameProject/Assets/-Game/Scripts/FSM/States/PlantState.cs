@@ -7,10 +7,10 @@ namespace _Game.Scripts
 {
     public class PlantState : State
     {
-        public Glass glass;
-        public Transform waterPoint;
-        public ParticleSystem waterParticle;
-        public Plant plant;
+        [SerializeField] private Glass glass;
+        [SerializeField] private Transform waterPoint;
+        [SerializeField] private ParticleSystem waterParticle;
+        [SerializeField] private Plant plant;
         public override void Enter()
         {
             base.Enter();

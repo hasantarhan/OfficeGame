@@ -6,7 +6,7 @@ namespace _Game.Scripts
 {
     public class FSM : MonoBehaviour
     {
-       [SerializeField] private State[] states;
+        [SerializeField] private State[] states;
         private State currentState;
         private int currentStateIndex;
 
@@ -52,14 +52,6 @@ namespace _Game.Scripts
             currentState?.Exit();
             currentState = state;
             currentState?.Enter();
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                NextState();
-            }
         }
     }
 }

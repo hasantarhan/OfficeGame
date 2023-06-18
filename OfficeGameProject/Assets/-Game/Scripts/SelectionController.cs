@@ -7,9 +7,6 @@ namespace _Game.Scripts
 {
     public class SelectionController : Singleton<SelectionController>
     {
-        public Transform currentClickable;
-        public Transform inventoryPoint;
-
         private void OnEnable()
         {
             LeanTouch.OnFingerDown += SelectObject;
@@ -29,7 +26,6 @@ namespace _Game.Scripts
                 {
                     if (clickable.CanClick)
                     {
-                        currentClickable = hit.collider.transform;
                         clickable.OnClick();
                     }
                 }

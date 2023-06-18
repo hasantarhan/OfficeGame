@@ -2,9 +2,8 @@
 
 public class PenDrawer : MonoBehaviour
 {
-    public LineRenderer lineRenderer;
-    public Transform penPoint; 
-
+    [SerializeField] private Transform penPoint; 
+    private LineRenderer lineRenderer;
     private float distanceThreshold = 0.01f;
     private Vector3 lastPosition;
 

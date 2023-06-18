@@ -6,14 +6,15 @@ namespace _Game.Scripts
 {
     public class WhiteBoardState : State
     {
-        public Transform penStartPosition;
-        public Pen pen;
-        public WhiteBoard whiteBoard;
+        [SerializeField] private Transform penStartPosition;
+        [SerializeField] private Pen pen;
+        [SerializeField] private WhiteBoard whiteBoard;
         public override void Enter()
         {
             base.Enter();
             whiteBoard.ColliderEnabled(true);
             whiteBoard.onClicked += NextState;
+            whiteBoard.CanClick = true;
         }
 
         public override void Exit()
@@ -21,6 +22,7 @@ namespace _Game.Scripts
             base.Exit();
             whiteBoard.ColliderEnabled(false);
             whiteBoard.onClicked -= NextState;
+            whiteBoard.CanClick = false;
         }
 
         private void NextState()

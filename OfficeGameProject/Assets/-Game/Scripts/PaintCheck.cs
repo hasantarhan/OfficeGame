@@ -6,16 +6,15 @@ namespace _Game.Scripts
 {
     public class PaintCheck : MonoBehaviour
     {
-        public Transform penPoint;
-        public GameObject objectPrefab;
-        public float yStart;
-        public float yEnd;
-        public float zStart;
-        public float zEnd;
-        public int numObjects;
-        public List<Vector3> points = new List<Vector3>();
-        public Action onPaintComplete;
+        [SerializeField] private Transform penPoint;
+        [SerializeField] private float yStart;
+        [SerializeField] private float yEnd;
+        [SerializeField] private float zStart;
+        [SerializeField] private float zEnd;
+        [SerializeField] private int numObjects;
+        private List<Vector3> points = new List<Vector3>();
         private Vector3[] pointTemp;
+        public Action onPaintComplete;
 
         private void Start()
         {

@@ -1412,6 +1412,7 @@ MonoBehaviour:
   info: Click to pen
   infoData: {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   pen: {fileID: 723783315}
+  penInventoryPoint: {fileID: 207199105}
 --- !u!114 &413255280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1477,6 +1478,7 @@ MonoBehaviour:
   info: Click to glass
   infoData: {fileID: 11400000, guid: 84547850f4036004aa4eef863e31d0eb, type: 2}
   glass: {fileID: 853968623}
+  glassInventoryPoint: {fileID: 763539625}
 --- !u!114 &419125714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6057,10 +6059,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 398518750, guid: 68cde0d9d238769429cf6083b52cf303, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 821946118154357737, guid: 68cde0d9d238769429cf6083b52cf303, type: 3}
       propertyPath: m_Name
       value: P_Trash
@@ -6109,10 +6107,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7965092681329105708, guid: 68cde0d9d238769429cf6083b52cf303, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.079
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68cde0d9d238769429cf6083b52cf303, type: 3}
 --- !u!1001 &1028717455897757629
@@ -6122,10 +6116,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2065134616, guid: 6fdbfbfdba8cc9a4aaa8ea3713e4d282, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2273867828986849627, guid: 6fdbfbfdba8cc9a4aaa8ea3713e4d282, type: 3}
       propertyPath: m_RootOrder
       value: 7

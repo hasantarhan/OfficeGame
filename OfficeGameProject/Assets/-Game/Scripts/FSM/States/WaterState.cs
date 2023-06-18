@@ -5,7 +5,7 @@ namespace _Game.Scripts
     public class WaterState : State
     {
 
-        public WaterBottle waterBottle;
+        [SerializeField] private WaterBottle waterBottle;
         public override void Enter()
         {
             base.Enter();

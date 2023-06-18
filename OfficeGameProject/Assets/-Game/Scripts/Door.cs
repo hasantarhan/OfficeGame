@@ -6,12 +6,10 @@ namespace _Game.Scripts
 {
     public class Door : MonoBehaviour,IClickable
     {
-        public Transform doorMesh;
+        [SerializeField] private Transform doorMesh;
         public bool CanClick { get; set; }
         public Action onClick;
-
-  
-
+        
         public void OnClick()
         {
             Open();

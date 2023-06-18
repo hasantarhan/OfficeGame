@@ -14,7 +14,6 @@ namespace _Game.Scripts
         private void Awake()
         {
             collider = GetComponent<Collider>();
-            CanClick = true;
         }
 
         public void OnClick()

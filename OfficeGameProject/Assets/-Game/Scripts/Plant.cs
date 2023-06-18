@@ -13,8 +13,8 @@ namespace _Game.Scripts
         public void Grow()
         {
             plantMesh.DOScaleY(1, 0.1f).SetEase(Ease.OutSine);
-            plantMesh.DOScaleX(1, 0.25f).SetEase(Ease.OutBack);
-            plantMesh.DOScaleZ(1, 0.25f).SetEase(Ease.OutBack).onComplete+= delegate
+            plantMesh.DOScaleX(1, 0.5f).SetEase(Ease.OutBack);
+            plantMesh.DOScaleZ(1, 0.5f).SetEase(Ease.OutBack).onComplete+= delegate
             {
                 onGrowed?.Invoke();
             };

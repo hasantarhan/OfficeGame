@@ -4,8 +4,8 @@ namespace _Game.Scripts
 {
     public class DoorState : State
     {
-        public Door door;
-        public GameObject doorButton;
+        [SerializeField] private Door door;
+        [SerializeField] private GameObject doorButton;
         public override void Enter()
         {
             base.Enter();

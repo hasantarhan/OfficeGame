@@ -4,9 +4,9 @@ namespace _Game.Scripts
 {
     public class PenPhysics : MonoBehaviour
     {
-        public float tiltAngle = 10f; 
-        public float rotationDamping = 5f; 
-        public float reverseRotationDamping = 5f;
+        [SerializeField] private float tiltAngle = 10f; 
+        [SerializeField] private float rotationDamping = 5f; 
+        [SerializeField] private float reverseRotationDamping = 5f;
         private Vector3 previousPosition;
         private Quaternion initialRotation;
 

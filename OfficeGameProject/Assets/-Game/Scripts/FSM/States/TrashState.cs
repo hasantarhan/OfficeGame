@@ -5,8 +5,8 @@ namespace _Game.Scripts
 {
     public class TrashState : State
     {
-        public Trash trash;
-        public Glass glass;
+        [SerializeField] private Trash trash;
+        [SerializeField] private Glass glass;
         public override void Enter()
         {
             trash.ColliderEnabled(true);

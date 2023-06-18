@@ -7,12 +7,11 @@ namespace _Game.Scripts
 {
     public class Glass : MonoBehaviour, IClickable
     {
-        private Collider collider;
-        public Transform inventoryPoint;
-        public Action onGlassInInventory;
-        public bool isDragging;
         [SerializeField] private float moveSpeed = 1;
         [SerializeField] private ParticleSystem pourWaterParticle;
+        private Collider collider;
+        public bool isDragging;
+        public Action onGlassInInventory;
         public Action onGlassEmpty;
         public Action onClick;
         public bool CanClick { get; set; }
@@ -53,6 +52,11 @@ namespace _Game.Scripts
 
         public void OnClick()
         {
+            onClick?.Invoke();
+        }
+
+        public void GoToInventoryPoint(Transform inventoryPoint)
+        {
             transform.SetParent(inventoryPoint);
             var sequence = DOTween.Sequence();
             sequence.Append(transform.DOMoveY(transform.position.y + 15, 0.5f))
@@ -61,8 +65,6 @@ namespace _Game.Scripts
                 .Append(transform.DOMove(inventoryPoint.position, 0.5f))
                 .OnComplete(() => { onGlassInInventory?.Invoke(); });
             sequence.Play();
-            CanClick = false;
-            onClick?.Invoke();
         }
 
         private void OnTriggerEnter(Collider other)
