@@ -23,6 +23,7 @@ public class Hand : MonoBehaviour
     {
         rectTransform = GetComponent<RectTransform>();
         transform.DOScale(0.9f, 0.75f).SetEase(Ease.OutSine).SetLoops(-1, LoopType.Yoyo);
+        DrawHandle(null);
     }
 
     private void OnEnable()
