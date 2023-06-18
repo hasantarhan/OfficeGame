@@ -16,6 +16,7 @@ public class Hand : MonoBehaviour
     private void Awake()
     {
         hand = GetComponentInChildren<Image>();
+        hand.enabled = false;
     }
 
     private void Start()

@@ -1,19 +1,21 @@
+# Proje Genel Bakışı
 
-# What does contain in project?
-  - Simple event based game controlling system
-  - Level loading system
-  - Scriptable object based upgrade system
-  - Basic UI system - main menu, in game, win, lose
-  - PlayerPrefs based data managment
-  - Event based currency managment
-  - Basic ease curves
-  - Some helper classes, methods and tools
+Bu projenin çerçevesi bir Finite State Machine (FSM) üzerinde oluşturulmuştur. FSM temel bir yazılım tasarım modeli olup, bu proje dahilinde belirli noktalarda kullanılmıştır. Not edilmesi gereken, bu implementasyonda tam bir FSM entegrasyonu bulunmamaktadır; projede yalnızca enter ve exit transitionlarından faydalanılmıştır.
 
-# Third party assets / Credits:
+Projenin çekirdek elemanlarından biri olan FSM sınıfı, (state) yönetimini üstlenirken, State sınıfı ise bir abstract class olarak tanımlanmıştır. Bu yapı sayesinde, state sıralamaları kolaylıkla değiştirilebilir ve statelere yeni özellikler eklenebilir veya mevcut özellikler çıkarılabilir. Her bir state için özel işlemler tanımlanabilir; yalnızca giriş ve çıkış koşullarının belirlenmesi gereklidir.
 
-- UIEffect https://github.com/mob-sakai/UIEffect
-- LeanTouch https://assetstore.unity.com/packages/tools/input-management/lean-touch-30111
-- Joystick Pack https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631
-- Dotween https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676
-- Toolbar extender https://github.com/marijnz/unity-toolbar-extender
-- Multi Screenshot Tool https://gist.github.com/yasirkula/fba5c7b5280aa90cdb66a68c4005b52d
+Proje genelinde, Unity objeleri arasında çapraz bağlantıların kullanılmasından kaçınılmıştır. Bunun yerine, haberleşmeler için event-based bir sistem oluşturulmuştur. Event yönetimi için ScriptableObject kullanılmıştır. Ek olarak, proje 9:16 aspect ratio'ya göre tasarlanmıştır ve kamera ayarları bu orana uygundur.
+
+## Yeni Bir State Ekleme Süreci
+Yeni bir state eklenecekse, aşağıdaki adımlar takip edilmelidir:
+
+- State sınıfından türetilmiş bir sınıf oluşturulmalıdır.
+- Oluşturulan bu sınıf, FSM sınıfındaki state listesine eklenmelidir.
+- Bu sınıftaki Enter ve Exit metodları override edilmelidir.
+- State tamamlandığında, FSM sınıfındaki NextState metodu çağırılmalıdır.
+
+## Optimizasyon Stratejileri
+Projenin performansını artırmak için bazı optimizasyon stratejileri uygulanmıştır:
+
+- Level içerisindeki objelerden bir kısmı statik olarak işaretlenmiştir.
+- 'PaintCheck' isminde bir sınıf oluşturulmuştur. Bu sınıf, çizimin ne kadarının tamamlandığını kontrol eder ve burası Jobs+Burst ile optimize edilebilir.
